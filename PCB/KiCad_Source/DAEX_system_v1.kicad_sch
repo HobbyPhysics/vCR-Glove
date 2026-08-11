@@ -1,0 +1,182 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "fdd2cd59-6100-4f55-9d49-6a92d47129d9")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 139.446 92.202)
+		(size 135.128 69.596)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "35d5a7bc-dd08-4810-aec7-74d3f99d7bd8")
+		(property "Sheetname" "Haptic"
+			(at 139.446 91.4904 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Haptic.kicad_sch"
+			(at 139.446 162.3826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DAEX_system_v1"
+				(path "/fdd2cd59-6100-4f55-9d49-6a92d47129d9"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 14.986 15.748)
+		(size 107.188 65.786)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6013bec6-b422-4666-bd7c-b7811af90fc0")
+		(property "Sheetname" "Power"
+			(at 14.986 15.0364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 14.986 82.1186 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DAEX_system_v1"
+				(path "/fdd2cd59-6100-4f55-9d49-6a92d47129d9"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.526 91.44)
+		(size 110.49 67.31)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8371af99-9314-41d7-81f6-9044d475a989")
+		(property "Sheetname" "User_IO"
+			(at 17.526 90.7284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "User_IO.kicad_sch"
+			(at 17.526 159.3346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DAEX_system_v1"
+				(path "/fdd2cd59-6100-4f55-9d49-6a92d47129d9"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 137.668 15.748)
+		(size 127 66.548)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ab1f1e69-61d9-4dfc-b32a-1e441b532075")
+		(property "Sheetname" "MCU"
+			(at 137.668 15.0364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 137.668 82.8806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DAEX_system_v1"
+				(path "/fdd2cd59-6100-4f55-9d49-6a92d47129d9"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
