@@ -12,3 +12,11 @@ These licenses permit commercial use of the designs and firmware subject to the 
 ## Project Status
 
 This project is under active development. Design files and documentation may be updated as testing progresses.
+
+## Construction and Technical Experience
+
+This project requires experience with electronic assembly, soldering, PCB fabrication and assembly services, microcontroller programming, and mechanical fabrication.
+
+The documentation and design files are provided to allow technically experienced users to reproduce or modify the project. They are not intended to provide comprehensive instruction in the underlying fabrication and assembly techniques.
+
+Users who do not have experience with these techniques are encouraged to obtain assistance from someone familiar with electronic assembly and fabrication.
