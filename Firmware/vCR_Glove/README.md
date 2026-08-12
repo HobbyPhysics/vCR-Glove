@@ -2,7 +2,7 @@
 
 This directory contains the Arduino firmware for the two vCR Glove electronic units.
 
-The same firmware is used for both the left-hand and right-hand units. A setting near the beginning of the program identifies which hand is being programmed.
+The same firmware is used for both the left-hand and right-hand units. A setting near the beginning of the program (IS_LEFT_HAND) identifies which hand is being programmed.
 
 ## Requirements
 
