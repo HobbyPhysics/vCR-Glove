@@ -101,6 +101,15 @@ No separately installed Arduino libraries are required for these includes. In pa
 
 The similarly named **Seeed nRF52 mbed-enabled Boards** package should not be substituted for the board package specified above.
 
+## Single-frequency mode:
+
+250 Hz on all channels. Closest to the published Tass-style stimulation.
+
+## Multi-frequency mode:
+Experimental option using 207.65, 233.08, 277.18, and 311.13 Hz.
+Finger order and frequency order are independently shuffled each CR cycle.
+This mode has not been evaluated clinically and is not part of the published Tass protocol.
+
 ## License
 
 The firmware is licensed under the MIT License. See:
