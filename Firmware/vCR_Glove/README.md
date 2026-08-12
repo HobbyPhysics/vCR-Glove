@@ -79,6 +79,28 @@ Operating parameters and hardware assignments are defined in the Arduino source 
 
 The firmware supplied here corresponds to the vCR Glove hardware documented in this repository.
 
+## Arduino IDE Configuration
+
+The firmware was compiled and tested using the following Arduino board configuration:
+
+* **Board:** Seeed XIAO nRF52840 Sense
+* **Board support package:** Seeed nRF52 Boards
+* **Tested version:** 1.1.13
+
+Install the `Seeed nRF52 Boards` package using the Arduino IDE Boards Manager and select **Seeed XIAO nRF52840 Sense** as the target board.
+
+The firmware uses:
+
+`#include <bluefruit.h>`
+
+`#include <math.h>`
+
+`#include <nrf.h>`
+
+No separately installed Arduino libraries are required for these includes. In particular, the Bluefruit support used by this firmware is supplied by the `Seeed nRF52 Boards` package.
+
+The similarly named **Seeed nRF52 mbed-enabled Boards** package should not be substituted for the board package specified above.
+
 ## License
 
 The firmware is licensed under the MIT License. See:
