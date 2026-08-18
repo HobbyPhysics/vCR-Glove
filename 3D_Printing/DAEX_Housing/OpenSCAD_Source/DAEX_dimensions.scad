@@ -153,39 +153,70 @@ lower_contact_cavity_center_x =
 contact_cavity_center_y = 0;
 
 
-// ============================================================================
-// Wire trenches in upper housing
-// ============================================================================
-
-wire_trench_y = 1.6;
-wire_trench_depth = cavity_depth;
-wire_trench_x = contact_cavity_x + ledge_x;
-
-wire_trench_center_x =
-    cavity_x/2 +
-    wire_trench_x/2;
-
-wire_trench_center_y =
-    -contact_cavity_y/2 +
-    wire_trench_y/2;
-
 
 // ============================================================================
-// Matching semicylindrical wire-clamp grooves
+// Perimeter wire-routing L steps in upper housing
 // ============================================================================
 
-wire_groove_d = 1.0;
+// Wire diameter is also the nominal L-step width and depth.
+wire_d = 1.10;
+wire_step_depth = 1.3;
+
+// Radius produced by the 3/16-inch end mill used on the machined prototype.
+// 3/16 in diameter = 4.7625 mm, therefore radius = 2.38125 mm.
+wire_step_corner_r = 2.38125;
+wire_step_corner_steps = 16;
+
+// Extend the L-step cutter slightly into the contact cavity at the 3rd/4th
+// vertices so coincident faces do not leave a zero-thickness Boolean wall.
+wire_step_contact_overlap = small_extension;
+
+// Extend vertices 5 and 6 into the ledge subtraction so the two cuts
+// overlap and cannot leave a thin Boolean wall.
+wire_step_ledge_overlap = small_extension;
+
+// Base six XY vertices for the -X,-Y L-shaped step.
+// The geometry script replaces the outer corner (vertex 1) with a quarter
+// circle of wire_step_corner_r.  The +X,-Y step is mirrored about X=0.
+wire_step_left_points = [
+    [-cavity_x/2,                        -cavity_y/2],
+    [-cavity_x/2 - ledge_x - wire_d,    -cavity_y/2],
+    [-cavity_x/2 - ledge_x - wire_d,
+        -contact_cavity_y/2 + wire_step_contact_overlap],
+    [-cavity_x/2 - ledge_x,
+        -contact_cavity_y/2 + wire_step_contact_overlap],
+    [-cavity_x/2 - ledge_x,
+        -ledge_y/2 + wire_step_ledge_overlap],
+    [-cavity_x/2,
+        -ledge_y/2 + wire_step_ledge_overlap]
+];
+
+// Derived center of the rounded outer corner for the -X,-Y step.
+// The radius is tangent to the bottom horizontal edge and outer vertical edge.
+wire_step_left_corner_center_x =
+    wire_step_left_points[1][0] + wire_step_corner_r;
+
+wire_step_left_corner_center_y =
+    wire_step_left_points[1][1] + wire_step_corner_r;
+
+
+
+// ============================================================================
+// Upper-housing rectangular wire exit slots
+// ============================================================================
+
+// These replace the former matching semicylindrical clamp grooves.
+// Strain relief is provided by the perimeter L steps and DAEX frame; the
+// rectangular slots simply capture and guide the wires out through the -Y wall.
+wire_groove_width = 1.27;
+wire_groove_depth = 1.10;
 wire_groove_x = 3.56;
 
 wire_groove_center_y =
     -(cavity_y/2 + y_wall_width/2);
 
-// Upper groove centerline lies on the upper-housing bottom mating plane
-upper_wire_groove_center_z = -housing_z/2;
-
-// Lower groove centerline lies on the lower-plate top mating plane
-lower_wire_groove_center_z = plate_z/2;
-
+// Slot length traverses the full -Y wall, with a small overcut at both ends
+// so no thin Boolean skin remains at the cavity or outside surface.
 wire_groove_length = y_wall_width + 2*small_extension;
 
 

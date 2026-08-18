@@ -86,13 +86,13 @@ use <DAEX_tapper.scad>
 // "interference_upper_plate"
 // "interference_upper_tapper"
 // "interference_plate_tapper"
-view_mode = "section_xz";
+view_mode = "exploded";
 
 
 // Z separation controls, in millimeters.
 //
 // These are visualization settings rather than manufactured dimensions, so
-// they belong in this assembly file rather than DAEX_dimensions_v2.scad.
+// they belong in this assembly file rather than DAEX_dimensions.scad.
 //
 // Set all three to zero for the nominal assembled positions.
 // Positive values move a part upward; negative values move it downward.
@@ -104,7 +104,7 @@ tapper_z_separation = -1;
 // view_mode = "exploded".
 exploded_upper_gap = 8;
 exploded_plate_gap = -8;
-exploded_tapper_gap = 14;
+exploded_tapper_gap = -2;
 
 
 // Section-plane controls.
@@ -159,7 +159,7 @@ plate_nominal_z = -(housing_z + plate_z)/2;
 //
 // cavity_roof_z = -housing_z/2 + cavity_depth
 //
-// In DAEX_tapper_v2, the top face of the broad cylinder is:
+// In DAEX_tapper, the top face of the broad cylinder is:
 // tapper_mid_center_z + tapper_mid_z/2
 //
 // The expression below aligns those two surfaces. This is a useful nominal

@@ -88,21 +88,6 @@ module top_contact_cavity_cuts() {
     }
 }
 
-module wire_clamp_groove_cuts() {
-    for (sx = [-1, 1]) {
-        translate([
-            sx*wire_groove_x,
-            wire_groove_center_y,
-            lower_wire_groove_center_z
-        ])
-            rotate([90, 0, 0])
-                cylinder(
-                    d = wire_groove_d,
-                    h = wire_groove_length,
-                    center = true
-                );
-    }
-}
 
 module vent_slot_cuts() {
     for (sx = [-1, 1]) {
@@ -149,7 +134,6 @@ module DAEX_lower_plate() {
         // Top mating features
         top_cavity_pocket_cut();
         top_contact_cavity_cuts();
-        wire_clamp_groove_cuts();
 
         // Through features
         vent_slot_cuts();
