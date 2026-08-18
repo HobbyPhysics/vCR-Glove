@@ -1,6 +1,6 @@
 /*
 Vibrotactile CR Glove Electronics Enclosure
-
+Version: v10
 Units: mm
 
 User coordinate system for all supplied plan-view dimensions:
@@ -20,7 +20,7 @@ STL export:
 // -------------------------
 // Display / export controls
 // -------------------------
-output_part = "top";   // "box", "top", "assembly", "exploded"
+output_part = "exploded";   // "box", "top", "assembly", "exploded"
 show_reference_parts = true;
 exploded_gap = 8;
 
